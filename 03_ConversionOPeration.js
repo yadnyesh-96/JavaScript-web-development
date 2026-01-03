@@ -61,3 +61,7 @@ console.log( (3 + 4) * 5 % 3); //2 (7)*5 =35%3=2
 
 console.log(+true); //1
 console.log(+""); //0
+
+let gameCounter=100
+++gameCounter
+console.log(gameCounter) //101
