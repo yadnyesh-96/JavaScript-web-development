@@ -73,7 +73,7 @@ calcBtn.addEventListener("click",async () => {
     }catch(error){
         statusText.textContent = error.message;
     }finally{
-        calcBtn.disabled = false;
+        calcBtn.disabled = false
     }
 })
 
