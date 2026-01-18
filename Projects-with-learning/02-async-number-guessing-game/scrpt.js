@@ -32,7 +32,7 @@ async function playgame(userGuess){
         if(userGuess < 1 || userGuess > 10 ){
             statusText.textContent = "Guess must be Between 1 to 10";
         }else if(userGuess === sceretnum){
-            statusText.textContent = "Correct ! you Guessed it!" 
+            statusText.textContent = "Correct ! you Guessed it!" ;
         }else if(userGuess > sceretnum){
             statusText.textContent =  `Too High! ${sceretnum}` ;
         }else{

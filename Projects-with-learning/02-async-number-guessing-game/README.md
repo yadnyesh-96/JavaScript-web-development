@@ -26,3 +26,5 @@ Async code is not only for APIs — it can control game logic too.
 
 ### Key learning
 Async logic + UI needs careful state control.
+
+![alt text](image.png)
