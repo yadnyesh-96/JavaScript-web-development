@@ -26,5 +26,5 @@ async function getCatFact(){
     }
 }
 
-button.addEventListener("click", getCatFact);
+button.addEventListener("click", getCatFact)
 

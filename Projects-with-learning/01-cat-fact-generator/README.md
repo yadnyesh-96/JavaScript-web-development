@@ -15,5 +15,5 @@ Practice async/await with a real API.
 - JSON parsing
 - error handling
 
-## Why we started with console only
+## Why we started with console onl
 To focus on logic before UI.
