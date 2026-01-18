@@ -34,9 +34,9 @@ async function playgame(userGuess){
         }else if(userGuess === sceretnum){
             statusText.textContent = "Correct ! you Guessed it!" ;
         }else if(userGuess > sceretnum){
-            statusText.textContent = "Too High! ${sceretnum}" ;
+            statusText.textContent =  `Too High! ${sceretnum}` ;
         }else{
-            statusText.textContent = "Too Low! ${sceretnum}";
+            statusText.textContent = `Too Low! ${sceretnum}`;
         }
     }catch(error){
         statusText.textContent = error.message ;
