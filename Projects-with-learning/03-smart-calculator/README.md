@@ -28,3 +28,4 @@ Async/await is not magic — it is structured, readable logic.
 ### Key learning
 Async logic + UI requires state control, not hacks.
 
+![alt text](image.png)
