@@ -6,8 +6,8 @@ async function delay(ms){
 
 
 async function calculator(a,b,operator){
-    try{
-        console.log("Calculating...");
+ 
+       
 
         await delay(1000);
 
@@ -37,14 +37,44 @@ async function calculator(a,b,operator){
                     throw new Error("Invalid operator");
         }
 
-        console.log("Result :",result);
+        
         return result;
-    }catch(error){
-        console.log("Error: ",error.message);
-        throw error;
-    }
+   
 }
 
-calculator(10,2,"+");
-calculator(10,0,"-");
-calculator("a",2,"*");
+// calculator(10,2,"+");
+// calculator(10,0,"-");
+// calculator("a",2,"*");
+
+
+// DOM elements
+const num1Input = document.getElementById("num1");
+const num2Input = document.getElementById("num2");
+const operatorSelect = document.getElementById("operator");
+const calcBtn = document.getElementById("calcBtn");
+const statusText = document.getElementById("status");
+const resultText = document.getElementById("result");
+
+
+calcBtn.addEventListener("click",async () => {
+    const a = Number((num1Input.value));
+    const b = Number((num2Input.value));
+    const operator =operatorSelect.value;
+
+    statusText.textContent = "Calculating ....";
+    resultText.textContent = "";
+    calcBtn.disabled=true;
+
+    try{
+        const result =await calculator(a,b,operator);
+        resultText.textContent = `Result ${result}`;
+        statusText.textContent = "";
+
+    }catch(error){
+        statusText.textContent = error.message;
+    }finally{
+        calcBtn.disabled = false;
+    }
+})
+
+
