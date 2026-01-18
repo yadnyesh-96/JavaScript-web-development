@@ -10,7 +10,7 @@ Build a calculator that uses async operations and proper error handling.
 - try/catch/finally pattern
 
 ## Key learning
-<!-- Async/await is not magic — it is structured, readable logic. -->
+Async/await is not magic — it is structured, readable logic.
 
 ## Step 2: UI Integration
 
