@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Alert</title>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return formValidation()">
+        <label for="Fname">Name:</label>
+        <input type="text" name="Fname" id="">
+        <input type="submit" name="submit" id="">
+    </form>
+
+    <h1 id="heading">Hello Student</h1>
+    <button id="button">Click Me</button>
+    <div id="square"></div>
+    <ul id="list"></ul>
+    <style>
+        #square{
+            width: 250px;
+            height: 300px;
+            margin-top: 20px;
+            border: 3px solid #000;
+            border-radius: 20px;
+            background-color: aliceblue;
+        }
+    </style>
+</body>
+<script>
+    function formValidation(){
+        let x = document.forms["myForm"]["Fname"].value;
+        if(x == ""){
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+
+
+    let h1=document.getElementById("heading");
+    let btn=document.getElementById("button");
+    let sqr=document.getElementById("square");
+    let list = document.getElementById("list");
+
+    btn.addEventListener("click",function(){
+       h1.innerText="You click the button"; 
+       h1.style.color="red"
+        sqr.style.backgroundColor="blue"
+
+        let li = document.createElement("li");
+        li.innerText="New Item Added";
+        list.appendChild(li);
+    });
+
+    
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD-EDIT-DEL</title>
+</head>
+<body>
+    <ul class="Week">
+        <li>Monday</li>
+    </ul>
+</body>
+    <script>
+
+        // add content 
+        function addDay(dayName){
+            const li = document.createElement("li");
+            li.innerHTML = `${dayName}`;
+            document.querySelector('.Week').appendChild(li);
+        }
+        addDay("Tuesday");
+        addDay("Wednseday");
+
+        function addOptiDay(dayName){
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(dayName));
+            document.querySelector('.Week').appendChild(li);
+        }
+        addOptiDay("Thursday");
+        addOptiDay("Friday");
+
+        //Edit
+        const ele = document.querySelector('li:nth-child(3)');
+        
+        const newContent = document.createElement('li');
+        newContent.textContent = "Wednesday"
+        ele.replaceWith(newContent)
+
+        // edit
+        const mon = document.querySelector("li:first-child");
+        mon.outerHTML ="<h1>Monday</h1>"
+
+        //Remove
+        const nth_child = document.querySelector("li:nth-child(2)");
+        nth_child.remove();
+    </script>
+</html>

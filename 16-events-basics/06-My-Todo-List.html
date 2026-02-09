@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        #taskInput {
+            border-radius: 8px;
+        }
+
+        #addBtn {
+            background-color: green;
+            color: white;
+            border-radius: 8px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Todo List</h1>
+    <input type="text" id="taskInput" placeholder="Enter Task">
+    <button id="addBtn">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <table id="taskTable">
+        <tr>
+            <th>Task Count</th>
+            <th>Task Description</th>
+            <th>Action</th>
+        </tr>
+       
+    </table>
+</body>
+<script>
+    let taskInput = document.querySelector("#taskInput");
+    let addBtn = document.querySelector("#addBtn");
+    // let taskList = document.querySelector("#taskList");
+
+    let taskTable = document.querySelector("#taskTable");
+
+     let count = 1;
+
+    addBtn.addEventListener("click", addTask);
+
+    taskInput.addEventListener("keydown", function(e){
+            if(e.key === "Enter"){
+                addTask();
+            }
+    })
+
+    function addTask(){
+        let task = taskInput.value;
+
+        if (task === "") {
+            alert("Enter task Please");
+            return;
+        }
+
+
+
+        // create new li to store new task 
+        /*
+        let li = document.createElement("li");
+        li.innerHTML = task + " ";
+
+        // mark task click on complete 
+        li.addEventListener("click", function () {
+            // li.style.textDecoration = "line-through";
+            li.style.color = "red"
+        });
+        */
+
+        let delBtn = document.createElement("button");
+        delBtn.innerHTML = "Delete";
+        delBtn.style.backgroundColor = "red"
+        delBtn.style.borderRadius = "8px"
+        delBtn.style.marginLeft = "5px"
+        delBtn.style.padding = "2px"
+        delBtn.style.fontSize = "12px"
+        delBtn.style.color = "white"
+
+        /*
+        delBtn.addEventListener("click", function () {
+            li.remove();
+        })
+        */
+        // li.appendChild(delBtn);
+
+
+        //taskList.appendChild(li);
+
+        // table 
+      
+       
+        let tr = document.createElement("tr");
+
+        let tdCount = document.createElement("td")
+        tdCount.innerHTML = count++;
+
+        let tdTask = document.createElement("td");
+        tdTask.innerHTML = task;
+
+        let tdDelBtn = document.createElement("td");
+        tdDelBtn.append(delBtn);
+
+        delBtn.addEventListener("click", function(){
+            tr.remove();
+        })
+
+        tr.appendChild(tdCount);
+        tr.appendChild(tdTask);
+        tr.appendChild(tdDelBtn);
+
+        tr.addEventListener("click",function(){
+            tr.style.backgroundColor="green"
+        })
+
+        taskTable.appendChild(tr);
+
+        taskInput.value = "";
+    }
+
+</script>
+
+</html>

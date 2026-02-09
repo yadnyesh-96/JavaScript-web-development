@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage-Events</title>
+</head>
+
+<body>
+  <button id="add">Add</button>
+<button id="remove">Remove</button>
+<button id="test">Test click</button>
+
+<p id="demo"></p>
+
+<a href="https://github.com/yadnyesh-96" id="link">yadnyesh-96</a>
+<p id="Ldemo"></p>
+
+</body>
+<script>
+  const test = document.getElementById("test");
+  const remove = document.getElementById("remove");
+  const add = document.getElementById("add");
+
+
+  function myFunction() {
+    document.getElementById("demo").innerHTML += "Hello!";
+  }
+
+  add.addEventListener("click", function () {
+    // Let test listen for click
+    test.addEventListener("click", myFunction);
+  });
+
+  remove.addEventListener("click", function () {
+    // Prevent test from listen for click
+    test.removeEventListener("click", myFunction);
+  });
+
+  const link=document.getElementById("link");
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    document.getElementById("Ldemo").innerHTML = "Link Bloked";
+  })
+
+  
+</script>
+
+</html>

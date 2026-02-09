@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Style</title>
+    <style>
+        .box{
+
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box"></div>
+</body>
+    <script>
+      const box = document.getElementById("box");
+      box.style.border = "2px solid black";
+      box.style.background = "red";
+    </script>
+</html>

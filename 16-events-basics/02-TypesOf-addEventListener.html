@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>EVENT</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="Mybtn">Click Me </button>
+    <p id="demo">Move the mouse in this window !</p>
+
+    <div id="box">
+        Move mouse over this box
+    </div>
+
+    <input type="text" name="" id="inName" placeholder="Enter Your Name">
+    <p id="msg"></p>
+
+    <h1 id="Load"></h1>
+    <p id="time"></p>
+
+    <button id="startBTN">Start</button>
+    <h1 id="startHeading"></h1>
+
+    <button id="start">Start Counter</button>
+    <button id="stop">Stop</button>
+    <h2 id="counter"></h2>
+</body>
+<script>
+    // mouse-move event 
+    document.addEventListener("mousemove", function (e){
+         document.getElementById("demo").innerHTML =
+  "X: " + event.clientX + " Y: " + event.clientY;
+    });
+
+
+    // click event 
+    const btn = document.getElementById("Mybtn");
+
+    btn.addEventListener("click", function () {
+        const p = document.getElementById("demo");
+        p.innerHTML = Date();
+        p.style.color = "white";
+        p.style.backgroundColor = "red"
+        p.style.fontWeight = "bolder"
+        document.querySelector("body").style.backgroundColor = "black"
+    });
+
+
+    // mouse over event 
+    const box = document.getElementById("box");
+    box.addEventListener("mouseover", function (){
+        box.innerHTML = "Mouse is Over on me"
+    });
+
+
+    // mouse out event 
+    box.addEventListener("mouseout", function (){
+        box.innerHTML = "Mouse is out !"
+    })
+
+    //Keyboard Events 
+    const nameInp = document.getElementById("inName");
+    nameInp.addEventListener("keydown", function (e){
+        if(e.code === "Enter"){
+        document.getElementById("msg").innerHTML = "Enter was Passed !"
+        }
+    });
+
+    // Load Event 
+    window.addEventListener("load", function (){
+        document.getElementById("Load").innerHTML = "HTML is Loaded !"
+    })
+
+    // Timing Event 
+    setInterval(showTime,1000);
+
+    function showTime(){
+        const d = new Date();
+        document.getElementById("time").innerHTML = 
+        d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+    }
+
+  // setTimeout()
+  // methods executes a function after delay in milliseconds 
+    document.getElementById("startBTN").addEventListener("click", function (){
+        setTimeout(showMsg,2000);
+    })
+
+    function showMsg(){
+        document.getElementById("startHeading").innerHTML = "Hello after Two seconds !  ";
+    }
+
+    // The SetInterval()Method
+    let myInterval;
+    let count=0;
+
+    document.getElementById("start").addEventListener("click", function (){
+        myInterval=setInterval(counter, 1000);
+    });
+
+    document.getElementById("stop").addEventListener("click", function (){
+        clearInterval(myInterval);
+    })
+
+    function counter(){
+        count++;
+        document.getElementById("counter").innerHTML = count;
+    }
+    /*
+    The setTimeout() method executes a function only once after a delay.
+    The setInterval() method executes a function repeatedly at every interval.
+    */
+</script>
+
+</html>

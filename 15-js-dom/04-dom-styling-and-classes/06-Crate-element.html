@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Delete</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        const div = document.createElement('div');
+        div.className = 'main';
+        div.id = 'main-div';
+        div.setAttribute("title", "generated title");
+        div.style.backgroundColor="green";
+        div.style.padding = "12px";
+
+        const addText=document.createTextNode("CREATED THE NEW DIV");
+
+        div.appendChild(addText);
+
+        document.body.appendChild(div)
+
+        const h1 = document.createElement("h1");
+        h1.innerText="Hello from Js";
+        h1.style.fontSize="35px";
+        h1.style.fontWeight="bolder";
+        h1.style.fontFamily = "Arial";
+        h1.style.textDecoration = "underline";
+
+        div.appendChild(h1)
+
+        
+
+
+    </script>
+</html>

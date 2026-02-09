@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            width:100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: black;
+        }
+    </style>
+        <div class="btn" id="btn"></div>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    let body = document.getElementsByTagName("body")
+    btn.addEventListener("click",function(){
+        btn.style.backgroundColor="red"
+        body.style.backgroundColor="red"
+    });
+    
+
+</script>
+</html>

@@ -1,0 +1,15 @@
+
+let values = [0, "", "JS", null, [], {}, 10];
+
+for( let v of values){
+    if(v) console.log(v," --> truthly");
+    else console.log(v," --> falsy");
+}
+
+
+let arr = [1,2,3,4,5,6];
+
+for(let a of arr){
+    if(a%2===0) console.log(a," => Even");
+    else console.log(a," => Odd");
+}

@@ -1,0 +1,66 @@
+
+
+// In js Object can store and hold any kind of data 'key-value' pairs 
+
+const obj={  //object 
+    name : "yadnyesh",  // properties name -> is key and "yadnyesh" is -> value.
+    age:21,
+
+    college : {branch:"E&TC",rollNo:22,sub:"Micro-Controller"} // object within object /-> Nested Object 
+}
+
+
+
+// Create the object using constructor and function 
+
+function student(std_id, std_div, std_name) {
+
+    this.std_id=std_id;
+    this.std_div=std_div;
+    this.std_name=std_name;
+
+}
+
+const S1=new student(1,"A-DIV","Yadnyesh")
+const S2=new student(2,"A-DIV","Aniket")
+const S3=new student(3,"A-DIV","Shubham")
+
+// console.log(S1.std_name) // yadnyesh
+// console.log(S2)
+
+//console.log(Object.keys(S3)) //[ 'std_id', 'std_div', 'std_name' ]
+
+const S4=[S1,S2,S3]
+// console.log(S4)
+
+console.log(Object.getOwnPropertyNames(S4))
+
+//console.table(S4) 
+
+// Using the Objec.create() method
+
+// function Person(name,age,location){
+//     this.name=name;
+//     this.age=age;
+//     this.location=location;
+// }
+
+
+const Person ={
+    name : "ABCD",
+    age : 51,
+    type : "FARMER",
+
+    displayType(){
+        console.log(this.type);
+    }
+}
+
+const p1= Object.create(Person);
+
+p1.displayType(); //FARMER
+
+p1.type="Citizen"
+p1.displayType() // Citizen
+
+// console.table(p1)

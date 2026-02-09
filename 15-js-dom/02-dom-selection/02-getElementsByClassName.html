@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM selector</title>
+</head>
+
+<body>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+</body>
+<script>
+    const items = document.getElementsByClassName("item");
+    console.log(items); // 0:p.item 1:p.item
+    console.log(items[0].textContent); // Item 1 
+    //items.length; // updates automatically
+
+</script>
+
+</html>
