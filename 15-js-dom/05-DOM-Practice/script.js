@@ -1,4 +1,9 @@
 
+function clearInput() {
+    let inputSec = document.getElementById("val-inp");
+    inputSec.value = " "
+}
+
 let firstValue = "";
 let choice = "";
 
