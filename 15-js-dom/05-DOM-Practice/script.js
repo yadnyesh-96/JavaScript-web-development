@@ -15,8 +15,6 @@ function calculatorOperation() {
         ['0', '.', '=', '/']
     ];
 
-
-
     let bntArea = document.getElementById("button-sec");
 
     for (let i = 0; i < btns.length; i++) {
