@@ -20,7 +20,8 @@ body {
     height: auto;
     padding: 15px;
     gap: 15px;
-    border: 2px solid #000;
+    border: 2px solid #b0b0b0;
+    box-shadow: 0px 0px 30px 1px #282828;
 }
 
 .box1 h5 {
@@ -33,16 +34,18 @@ body {
 .input-sec {
     font-size: 4vh;
     height: 12vh;
-    padding: 10px;
-    border: 1px solid #ffffff;
+    padding: 2px;
+    /* border: 1px solid #ffffff; */
 }
 
 #val-inp {
     width: 100%;
     height: 100%;
     padding: 0px 15px;
-    font-size: 5vh;
-    background: #f7f7f793;
+    font-weight: bolder;
+    font-size: 8vh;
+    color: #282828;
+    background: #ffffff4b;
 }
 
 
@@ -50,7 +53,7 @@ body {
     height: 55vh;
     display: grid;
 
-    padding: 12px;
+    /* padding: 12px; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 13vh 13vh 13vh 13vh;
     grid-template-areas: "num-btn num-btn num-btn num-btn"
@@ -58,5 +61,11 @@ body {
         "num-btn num-btn num-btn num-btn"
         "num-btn num-btn num-btn num-btn";
     gap: 6px;
-    border: 1px solid #ffffff;
+    /* border: 1px solid #ffffff; */
+}
+
+.num-btn{
+    font-weight: bolder;
+    font-size: 8vh;
+    background: #ffffff4b;
 }

@@ -10,7 +10,7 @@ function calculatorOperation(){
 
     // let firstValue,secondValue,result;
     
-    let bntArea = document.querySelector(".button-sec"); 
+    let bntArea = document.getElementById("button-sec"); 
 
     for(let i=0; i<btns.length; i++){
         for(let j=0; j<btns[i].length; j++){
@@ -20,7 +20,7 @@ function calculatorOperation(){
             btn.setAttribute("value",`${btns[i][j]}`)
             btn.setAttribute("class","num-btn")
 
-            btn.style.color = "#000"
+            btn.style.color = "#282828"
             bntArea.appendChild(btn)
         }
     }
