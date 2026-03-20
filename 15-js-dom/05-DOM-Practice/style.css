@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+#clear{
+    
+}
+
 body {
     height: 100vh;
     display: flex;
