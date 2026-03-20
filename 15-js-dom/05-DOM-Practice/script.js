@@ -7,7 +7,7 @@ function calculatorOperation(){
         ['0','.','=','/']
     ];
 
-    let firstValue,secondValue,result;
+    // let firstValue,secondValue,result;
     
     let bntArea = document.getElementById("button-sec");
 
@@ -16,7 +16,11 @@ function calculatorOperation(){
 
             let btn = document.createElement("input");
             btn.setAttribute("type","button");
-            btn.setAttribute("value","`{btns[i][j]}`")
+            btn.setAttribute("value",`${btns[i][j]}`)
+            btn.setAttribute("class","button-sec")
+            
+            bntArea.appendChild(btn)
         }
     }
+
 }
