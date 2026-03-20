@@ -50,7 +50,7 @@ body {
     height: 55vh;
     display: grid;
 
-    padding: 1px 1px;
+    padding: 12px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 13vh 13vh 13vh 13vh;
     grid-template-areas: "num-btn num-btn num-btn num-btn"
