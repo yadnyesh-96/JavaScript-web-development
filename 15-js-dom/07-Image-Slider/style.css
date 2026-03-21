@@ -8,9 +8,39 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
 }
 
 .image-slider
-{
+{   
+    width: 70%;
+    height: 75vh;
     border: 1px solid #000;
+}
+#img-data{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.btn-s{
+    width: 70%;
+    height: 12vh;
+    display: flex;
+    padding: 5px 15px;
+    justify-content:space-between;
+    /* border: 1px solid #f10000; */
+}
+
+.btn-s button{
+    width: 15%;
+    border: 1px solid rgba(0, 166, 255, 0.316);
+    border-radius: 8px;
+    background: #d5e8ff56;
+}
+.btn-s button i{
+    font-size: 6vh;
+    font-weight: 900;
 }
