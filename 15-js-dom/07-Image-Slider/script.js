@@ -15,6 +15,14 @@ let index=0;
 function nextImage() {
     imgEle.src = `${imgStorage[index]}`
     index++;
+    
+    if(index===imgStorage.length)
+    {
+        index=0
+
+    }else if(index<=0){
+        
+    }
 }
 
 function prevImage() {
