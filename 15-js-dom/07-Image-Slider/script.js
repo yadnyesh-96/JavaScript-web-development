@@ -8,16 +8,16 @@ let imgStorage = [
 
 ]
 
-// let imgEle = document.getElementById("img-data")
+let imgEle = document.getElementById("img-data")
 
 let index=0;
-console.log(imgStorage[index])
-
 
 function nextImage() {
-    imgEle.src = "../07-Image-Slider/img-1.jpg"
+    imgEle.src = `${imgStorage[index]}`
+    index++;
 }
 
 function prevImage() {
-
+    imgEle.src = `${imgStorage[index]}`
+    index--;
 }
