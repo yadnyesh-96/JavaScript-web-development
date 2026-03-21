@@ -10,13 +10,13 @@ let imgStorage = [
 
 let imgEle = document.getElementById("img-data")
 
-let index=0;
+let index = 0;
 
 function nextImage() {
     imgEle.src = `${imgStorage[index]}`
     index++;
-    
-    if(index===imgStorage.length || index<=0)  index=0
+
+    if (index === imgStorage.length || index <= 0) index = 0
 
 }
 
@@ -24,5 +24,13 @@ function prevImage() {
     imgEle.src = `${imgStorage[index]}`
     index--;
 
-    if(index===imgStorage.length || index<=0)  index=0
+    if (index === imgStorage.length || index <= 0) index = 0
 }
+
+/*
+setInterval(() => {
+    imgEle.src = `${imgStorage[index]}`
+    index++;
+
+    if (index === imgStorage.length || index <= 0) index = 0
+},1500)*/
