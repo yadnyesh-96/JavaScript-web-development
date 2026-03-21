@@ -16,16 +16,13 @@ function nextImage() {
     imgEle.src = `${imgStorage[index]}`
     index++;
     
-    if(index===imgStorage.length)
-    {
-        index=0
+    if(index===imgStorage.length || index<=0)  index=0
 
-    }else if(index<=0){
-        
-    }
 }
 
 function prevImage() {
     imgEle.src = `${imgStorage[index]}`
     index--;
+
+    if(index===imgStorage.length || index<=0)  index=0
 }
