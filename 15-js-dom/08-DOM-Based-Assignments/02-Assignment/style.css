@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-end;
+}
+
+.section{
+    width: 70%;
+    min-height: 10vh;
+    margin: 100px 0px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ffffff6a;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+
+    background: #ffffff32;
+    box-shadow: 1px 1px 40px 8px #ffffff8e;
+}
+.section .btns{
+    width: 10%;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    background:none;
+}
