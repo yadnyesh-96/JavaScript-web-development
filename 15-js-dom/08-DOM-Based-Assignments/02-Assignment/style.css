@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #000;
+
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ body{
     margin: 100px 0px;
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid #ffffff6a;
+    border: 1px solid #2828286a;
 
     display: flex;
     justify-content: space-evenly;
@@ -33,4 +33,8 @@ body{
     border-radius: 10px;
     border: 1px solid #ffffff;
     background:none;
+}
+
+.section .btns:hover{
+    cursor: pointer;
 }
