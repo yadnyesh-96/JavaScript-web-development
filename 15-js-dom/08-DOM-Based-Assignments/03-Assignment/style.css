@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.card{
+    width: 70%;
+    margin-top: 40px;
+    max-height: 90vh;
+    /* border: 1px solid #000; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card .info{
+    width: 90%;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px;
+}
+
+.info h1{
+    margin-bottom: 10px;
+    color: #FF6633;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    
+}
+.info h2{
+    margin-bottom: 10px;
+    color: #B967FF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+.info p{
+    margin-bottom: 10px;
+    margin-right: 15px;
+    color: #553B08;
+    font-family: cursive;
+    align-items: start;
+}
+
+.card .btn-sec{
+    width: 90%;
+    height: 8vh;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #233977b7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-sec h1{
+    color: #ffff;
+    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn-sec i{
+    color: #ffff;
+    font-size: 1.5em;
+}
+
+.info2{
+    width: 90%;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    visibility:hidden;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px;
+}
+
+.info2 h1{
+    margin-bottom: 10px;
+    color: #FF6633;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    
+}
+.info2 h2{
+    margin-bottom: 10px;
+    color: #B967FF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+.info2 p{
+    margin-bottom: 10px;
+    margin-right: 15px;
+    color: #553B08;
+    font-family: cursive;
+    align-items: start;
+}
