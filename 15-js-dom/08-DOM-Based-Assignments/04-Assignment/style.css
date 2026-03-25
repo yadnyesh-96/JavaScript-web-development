@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 20%;
+    padding: 15px;
+    border: 1px solid #00000057;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    box-shadow: 2px 1px 4px #2c2c2c95;
+}
+
+.card input{
+    width: 90%;
+    height: 5vh;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #00000032;
+    border-radius: 5px;
+}
+
+.card button{
+    width: 90%;
+    height: 5vh;
+    font-size: 1em;
+    border-radius: 5px;
+    color: white;
+    background-color: lab(40.74% 79.93 -87.4 / 0.379);
+    border: 1px solid lab(40.74% 79.93 -87.4 / 0.95);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.475);
+}
+.card .extractText{
+    width: 90%;
+    max-height: 50vh;
+    padding: 5px 5px;
+}
+
+.card button:hover{
+    cursor: pointer;
+}
