@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 50%;
+    max-height: 90vh;
+    border: 1px solid #000;
+}
+
+.inputS{
+    width: 100%;
+    border: 1px solid #000;
+}
