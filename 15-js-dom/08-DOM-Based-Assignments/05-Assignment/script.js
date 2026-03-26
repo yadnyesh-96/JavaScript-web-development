@@ -1,11 +1,22 @@
-let countBtn = document.getElementById("countButton");
 
-let countText = document.getElementById("count");
-let count = 1;
-let counter = document.createElement('h1');
-    counter.setAttribute(id,'count');
-    
+let countBtn = document.getElementById("countButton");
+let countText = document.getElementById("dialer1");
+
+
+let count = 0;
+
+
+let counter = document.getElementById('count')
+
+counter.innerHTML = count; 
+
 function myCount(){
-    counter.innerHTML = count;
-    countText
+    count=count + 1;
+    counter.innerHTML = count; 
+    if(count===20){
+        countBtn.disabled = true;
+        countBtn.style.background = 'red'
+        countBtn.style.border = '1px solid #F77F7F'
+        countBtn.style.boxShadow = '0 0 5px red'
+    }
 }
