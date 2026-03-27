@@ -1,10 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
 
     display: flex;
@@ -12,7 +13,7 @@ body{
     justify-content: center;
 }
 
-.card{
+.card {
     width: 50%;
     max-height: 90vh;
     padding: 8px;
@@ -22,45 +23,68 @@ body{
     gap: 8px;
 }
 
-.inputS{
+.inputS {
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
+    justify-content: space-evenly;
+    gap: 8px;
+    /* border: 1px solid #000; */
 }
 
-.MyTasks{
+.inputS h2 {
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inputS i {
+    font-size: 1em;
+}
+.inputS input{
+    height: 7vh;
+}
+.inputS button{
+    width: 20%;
+    height: 4vh;
+    border-radius: 6px;
+}
+.MyTasks {
     width: 100%;
     /* border: 1px solid #000; */
 }
-.MyTasks table 
-{   width: 100%;
+
+.MyTasks table {
+    width: 100%;
     font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #000;
 }
-.MyTasks tr th{ 
+
+.MyTasks tr th {
     height: 5vh;
     border: 1px solid #000;
 }
 
-.MyTasks th:nth-child(1){
+.MyTasks th:nth-child(1) {
     width: 10%;
 }
-.MyTasks th:nth-child(3){
+
+.MyTasks th:nth-child(3) {
     width: 28%;
 }
 
-.MyTasks tr td{
-    padding:0px 8px;
+.MyTasks tr td {
+    padding: 0px 8px;
     height: 5vh;
     border: 1px solid #000;
 }
 
-.MyTasks td:nth-child(3),td:nth-child(4){
+.MyTasks td:nth-child(3),
+td:nth-child(4) {
     text-align: center;
-} 
+}
 
-.MyTasks .MarkTask{
+.MyTasks .MarkTask {
     width: 80%;
     padding: 4px;
     border-radius: 6px;
@@ -68,25 +92,31 @@ body{
     background: #15801c;
     border: 2px solid #000;
 }
-.MarkTask i{
+
+.MarkTask i {
     color: white;
 }
-.MarkTask:hover{
+
+.MarkTask:hover {
     cursor: pointer;
 }
-.MyTasks .MarkTask1{
+
+.MyTasks .MarkTask1 {
     width: 80%;
     padding: 4px;
     border-radius: 6px;
     border: 2px solid #9b0303;
     background: #ff2929cf;
 }
-.MarkTask1:hover{
+
+.MarkTask1:hover {
     cursor: pointer;
 }
-.MarkTask1 i{
+
+.MarkTask1 i {
     color: white;
 }
-i{
+
+i {
     font-size: 1.4em;
 }
