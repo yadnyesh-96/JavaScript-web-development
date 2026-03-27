@@ -5,20 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../08-Assignment/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ToDo List</title>
 </head>
 
 <body>
     <div class="card">
         <div class="inputS">
-            <h2>My To Do List</h2>
+            <h2><i class="fa-solid fa-list"></i> My To Do List</h2>
             <input type="text" name="" id="taskInp">
             <button>Add Task</button>
         </div>
         <div id="MyTasks" class="MyTasks">
-            <ul id="myTaskList">
-                
-            </ul>
+            <table>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Task Heading</th>
+                    <th colspan="2">Action</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>MyTasks</td>
+                    <td><button class="MarkTask"><i class="fa-solid fa-list-check"></i></button></td>
+                    <td><button class="MarkTask1"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+            </table>
         </div>
 
     </div>

@@ -15,10 +15,78 @@ body{
 .card{
     width: 50%;
     max-height: 90vh;
+    padding: 8px;
     border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .inputS{
     width: 100%;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #000;
+}
+
+.MyTasks{
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+.MyTasks table 
+{   width: 100%;
+    font-size: 1.2em;
+    border: 1px solid #000;
+}
+.MyTasks tr th{ 
+    height: 5vh;
+    border: 1px solid #000;
+}
+
+.MyTasks th:nth-child(1){
+    width: 10%;
+}
+.MyTasks th:nth-child(3){
+    width: 28%;
+}
+
+.MyTasks tr td{
+    padding:0px 8px;
+    height: 5vh;
+    border: 1px solid #000;
+}
+
+.MyTasks td:nth-child(3),td:nth-child(4){
+    text-align: center;
+} 
+
+.MyTasks .MarkTask{
+    width: 80%;
+    padding: 4px;
+    border-radius: 6px;
+    border: 2px solid #063d1a;
+    background: #15801c;
+    border: 2px solid #000;
+}
+.MarkTask i{
+    color: white;
+}
+.MarkTask:hover{
+    cursor: pointer;
+}
+.MyTasks .MarkTask1{
+    width: 80%;
+    padding: 4px;
+    border-radius: 6px;
+    border: 2px solid #9b0303;
+    background: #ff2929cf;
+}
+.MarkTask1:hover{
+    cursor: pointer;
+}
+.MarkTask1 i{
+    color: white;
+}
+i{
+    font-size: 1.4em;
 }
