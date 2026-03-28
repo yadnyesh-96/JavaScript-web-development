@@ -8,20 +8,20 @@ const userInput = document.getElementById("userInput");
 userInput.addEventListener('keyup', () => {
     let str = userInput.value;
     let flag = false;
-    let charCount=false;
-    
+    let charCount = false;
+
     for (let i = 0; i < str.length; i++) {
         let chars = str.charCodeAt(i);
         if (!((chars >= 65 && chars <= 90) || (chars >= 97 && chars <= 122))) {
             flag = true;
 
-            if(chars>=48 || chars<=57){
-                charCount=true;
+            if (chars >= 48 || chars <= 57) {
+                charCount = true;
                 break;
-            }else{
-                charCount=false;
+            } else {
+                charCount = false;
             }
-            break; 
+            break;
         }
     }
 
@@ -31,9 +31,9 @@ userInput.addEventListener('keyup', () => {
 
     const myWarn = document.getElementById("warn");
 
-    if(charCount){
+    if (charCount) {
         userInput.insertAdjacentElement("afterend", warn)
-    }else{
+    } else {
         myWarn.remove()
     }
 
