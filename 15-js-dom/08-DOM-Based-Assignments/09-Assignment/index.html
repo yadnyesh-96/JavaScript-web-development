@@ -12,15 +12,16 @@
 </head>
 
 <body>
-    <div class="circle">
+    <div id="circle" class="circle">
         <i class="fa-regular fa-circle-check fa-beat"></i>  
     </div>
-    <div class="card">
+    <div id="card" class="card">
         <h1>Thank You !</h1>
         <h2>Your details has been successfully submitted, Thanks!</h2>
-        <button>Ok</button>
+        <button onclick="closePop()" >Ok</button>
     </div>
-    <button id="doneBTN" class="doneBTN">Done  <i class="fa-solid fa-circle-check"></i></button>
+    <button id="doneBTN" onclick="visiblePop()" class="doneBTN">Done  <i class="fa-solid fa-circle-check"></i></button>
+    <script src="../09-Assignment/script.js"></script>
 </body>
 
 </html>
