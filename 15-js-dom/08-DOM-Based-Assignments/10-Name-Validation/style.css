@@ -37,7 +37,7 @@ body{
     background: #dbd3f69b;
     border-radius: 8px;
     box-shadow: 0px 0px 2px 1px #dbd3f69b;
-    border: none;
+    /* border: none; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
