@@ -11,7 +11,10 @@ myInput.addEventListener('input', () => {
         myInput.style.boxShadow = '0 0 6px red'
         msg.innerHTML = "Invalid aadhar number must be 12 digits"
 
-    } else {
+    } 
+    
+    
+    if(num.length==12){
         let flag = false;
 
         for (let i = 0; i < num.length; i++) {
@@ -21,9 +24,9 @@ myInput.addEventListener('input', () => {
                 flag = true;
                 break;
             }
-            
+
         }
-        if (flag) {
+        if (!flag) {
             msg.style.color = 'red'
             myInput.style.boxShadow = '0 0 6px red'
             msg.innerHTML = "Invalid aadhar number must be 12 digits"
