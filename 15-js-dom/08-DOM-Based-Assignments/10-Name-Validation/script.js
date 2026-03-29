@@ -51,6 +51,10 @@ userInput.addEventListener('keyup', () => {
 
 const upassInput = document.getElementById("passInput");
 upassInput.addEventListener('keyup', () => {
+    let warn = document.createElement("h2");
+    warn.setAttribute("id", "warn");
+    warn.innerHTML = "password size at least 6"
+
     let passLength = upassInput.value
     if (passLength.length == 0) {
         upassInput.style.boxShadow = "none"
@@ -58,6 +62,16 @@ upassInput.addEventListener('keyup', () => {
         upassInput.style.boxShadow = "0 0 5px green";
     } else {
         upassInput.style.boxShadow = "0 0 5px red";
+        let pass = false;
+        for(let m=0; m<passLength.length; m++){
+            pass=true;
+            if(pass){
+                upassInput.insertAdjacentElement("afterend", warn)
+                break;
+            }
+        }
+
+        
     }
 })
 
