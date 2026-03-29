@@ -37,5 +37,11 @@ myInput.addEventListener('input', () => {
         }
     }
 
+    if(num == " "){
+         msg.style.color = 'none'
+            myInput.style.boxShadow = 'none'
+            msg.innerHTML = ""
+    }
+
 
 })
