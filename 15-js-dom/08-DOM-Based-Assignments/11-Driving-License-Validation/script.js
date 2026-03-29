@@ -1,5 +1,5 @@
 const rtoMap = {
-    MH: {
+    MH: {  //rtoMap["MH"].code["01"]
         name: "Maharashtra",
         codes: {
             "01": "Mumbai Central",
@@ -45,8 +45,8 @@ function verifyCode(dataInput) {
     return `${stateName} ${city} ${stateCode} ${rtoCode}`;
 }
 
-// let data = verifyCode("MH51");  
-
+let mydata = verifyCode("MH16");
+console.log(mydata)
 // function valididateCard(){
 //     const licenInput = document.getElementById("licenInput");
 //     let data = licenInput.value
@@ -55,16 +55,38 @@ function verifyCode(dataInput) {
 //     }
 // }
 
+
 const licenInput = document.getElementById("licenInput");
 licenInput.addEventListener('keyup', () => {
 
     let data = licenInput.value
 
-    if (data.length>5) {
-        alert("Not accepted")
+
+
+    let h2check = document.getElementById('h2check');
+
+    if (data.length >= 16) {
+        if (!h2check) {
+            let war = document.createElement('h2');
+            war.id = 'h2check'
+            war.style.color = 'red'
+            war.style.fontSize = '1em'
+            war.style.fontWeight = 'lighter'
+            war.style.letterSpacing = '1px'
+            war.style.marginTop = '5px'
+            war.innerHTML = 'Input shold be digits 16 digits ex.MH1420230012345';
+            licenInput.insertAdjacentElement('afterend', war)
+            licenInput.value = " "
+        } else {
+            h2check.remove()
+
+        }
+    } else {
+        h2check.remove()
+
     }
 
-    
+
 
 })
 
