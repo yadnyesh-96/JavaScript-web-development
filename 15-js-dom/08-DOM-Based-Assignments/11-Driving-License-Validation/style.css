@@ -54,5 +54,43 @@ body{
 .card .val{
     width: 100%;
     height: 30vh;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
     border: 1px solid #000;
+    position: relative;
+}
+
+.val input{
+    width: 100%;
+    height: 6vh;
+    text-transform: uppercase;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+
+}
+
+.val button{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 18%;
+
+    border-radius: 8px;
+    border: 2px solid #140959da;
+    background: #9a8df4d3;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    height: 5vh;
+    margin-top: 20px;
+
+    box-shadow: 1px 1px 5px #9a8df4d3;
+}
+.val button:hover{
+    cursor: pointer;
 }
