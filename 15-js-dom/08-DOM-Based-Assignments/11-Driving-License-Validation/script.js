@@ -63,7 +63,9 @@ licenInput.addEventListener('keyup', () => {
     if (data.length>5) {
         alert("Not accepted")
     }
+
     
+
 })
 
 
