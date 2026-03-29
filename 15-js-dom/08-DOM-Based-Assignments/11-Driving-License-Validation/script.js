@@ -39,14 +39,14 @@ function verifyCode(dataInput) {
     const city = rtoMap[stateCode].codes[rtoCode] // rtoMap["DL"].codes["01"]
 
     if (!city) {
-        return `${stateName} (unknown RTO : ${stateCode}-${rtoCode})`;
+        return `${stateName}  ( unknown RTO : ${stateCode}-${rtoCode} )`;
     }
 
     return `${stateName} ${city} ${stateCode} ${rtoCode}`;
 }
 
-let mydata = verifyCode("MH16");
-console.log(mydata)
+// let mydata = verifyCode("MH16");
+// console.log(mydata)
 // function valididateCard(){
 //     const licenInput = document.getElementById("licenInput");
 //     let data = licenInput.value
@@ -57,10 +57,24 @@ console.log(mydata)
 
 
 const licenInput = document.getElementById("licenInput");
-licenInput.addEventListener('keyup', () => {
+licenInput.addEventListener('input', () => {
 
     let data = licenInput.value
 
+    // let digitFlag = false;
+    // for (let i = 3; i < data.length; i++) {
+    //     let ch = data.charCodeAt(i);
+
+    //     if (ch < 48 || ch > 57) {
+    //         digitFlag = true;
+    //         break;
+    //     }
+    // }
+    // if (digitFlag) {
+    //     licenInput.style.boxShadow = '0 0 6px red'
+    // }else{
+    //      licenInput.style.boxShadow = '0 0 6px red'
+    // }
 
 
     let h2check = document.getElementById('h2check');
@@ -76,23 +90,70 @@ licenInput.addEventListener('keyup', () => {
             war.style.marginTop = '5px'
             war.innerHTML = 'Input shold be digits 16 digits ex.MH1420230012345';
             licenInput.insertAdjacentElement('afterend', war)
-            licenInput.value = " "
-        } else {
-            h2check.remove()
+            licenInput.style.boxShadow = '0 0 6px red'
 
         }
     } else {
-        h2check.remove()
-
+        if (h2check) {
+            h2check.remove();
+        }
+        licenInput.style.boxShadow = 'none';
     }
-
-
-
 })
 
 
+function valididateCard() {
+    let checkBtn = document.getElementById('checkBtn')
+    let data = licenInput.value
+    let isValid = /^[A-Z]{2}[0-9]{2}[A-Z]{1,2}[0-9]{4}$/.test(data)
+    if (isValid) {
+        let myOutput = document.getElementById('myOutput')
+        let output = verifyCode(data.slice(0, 4))
+        if (!myOutput) {
+            let myoutput = document.createElement('p');
+            myoutput.id = 'myOutput'
+            myoutput.innerHTML = output
 
+            let data = output
+            let myWord = data.split(" ")
+            let flag = false;
+            for (let i = 0; i < myWord.length; i++) {
+                if (myWord[i] === "unknown") {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag) {
+                myoutput.style.color = 'red'
+            } else {
+                myoutput.style.color = 'green'
+                licenInput.style.boxShadow = '0 0 6px green'
+            }
 
+            // myoutput.style.color='green'
+            checkBtn.insertAdjacentElement('afterend', myoutput)
+        } else {
+            myOutput.remove()
+        }
+
+    }
+
+}
+
+function makeWar(checkdata, tagId, word) {
+    let mycheck = checkdata.split(" ");
+    let flag = false;
+    for (let i = 0; i < mycheck.length; i++) {
+        if (mycheck[i] === `${word}`) {
+            flag = true
+            break;
+        }
+    }
+    if (flag) {
+        tagId.style.color = 'red'
+    }
+
+}
 
 
 /*

@@ -94,3 +94,13 @@ body{
 .val button:hover{
     cursor: pointer;
 }
+
+#myOutput{
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    width: 50%;
+    /* color: blueviolet; */
+    /* border: 1px solid #000; */
+}
