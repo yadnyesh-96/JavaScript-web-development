@@ -26,11 +26,31 @@ body{
 .card .designs{
     width: 100%;
     height: 10vh;
-    border: 1px solid #000;
-
+    border: 1px solid #ff0000;
+    padding: 5px;
     display: flex;
-}
 
+    align-items: center;
+}
+.designs h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    margin-left: 10px;
+}
+.designs img{
+    width: 20%;
+}
+#logo{
+    width: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#flag{
+    border-radius: 8px;
+    width: 10%;
+    height: 70%;
+    margin-right: 10px;
+}
 .card .val{
     width: 100%;
     height: 30vh;
