@@ -9,7 +9,7 @@
 
 async function getNumber(){
     return 5;
-} 
+}
 
 getNumber().then(result => console.log(result))
 
